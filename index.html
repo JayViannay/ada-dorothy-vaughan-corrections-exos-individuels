@@ -10,32 +10,19 @@
     <!-- Bootstrap Intégretion CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Fichier de style principal du projet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
-                <h1>Guess Number Game</h1>
-                <p>- Ada Tech School - Dorothy Vaughan Paris 2022 -</p>
-            </div>
-            <div class="col-md-6 mx-auto text-center bg-dark text-light p-5 rounded" id="game">
-                <label for="player_2_number" class="form-label">Player 2 <br> Guess a number !</label>
-                <div class="mt-2 alert alert-primary">
-                    <p>Number of attempts : <span id="tries">0</span></p>
-                    <p id="infos"></p>
-                </div>
-                <div class="mt-4">
-                    <span id="min">0</span> < <input type="number" id="player_2_number" name="player_2_number"> < <span id="max">50</span>
-                </div>
-                <div class="mt-2">
-                    <button type="button" class="btn btn-primary btn-sm" id="attempts">Try !</button>
-                </div>
-            </div>
-            <div class="col-md-6 mx-auto text-center bg-dark text-light p-5 rounded d-none" id="win">
-                <h2>🎉 YOU WIN !</h2>
-                <p>Number of attempts : <span id="win_tries"></span></p>
-                <button type="button" class="btn btn-primary btn-sm" id="restart">Restart</button>
+                <h1>- Ada Tech School - Dorothy Vaughan Paris 2022 -</h1>
+                <h2>Exercices individuels - Corrections</h2>
+                <ul class="list-unstyled">
+                    <li><a href="/pages/guess_number.html">Guess Number</a></li>
+                </ul>
             </div>
         </div>
 
@@ -44,12 +31,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
             crossorigin="anonymous"></script>
-
-        <!-- Les dépendances Javascript du projet -->
-        <script src="game.js"></script>
-
-        <!-- Le fichier JavaScript principal du projet -->
-        <script src="main.js"></script>
 </body>
 
 </html>
