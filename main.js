@@ -13,6 +13,7 @@ function didIwin(param) {
     if (param === 22) alert('Well Done !')
 }
 
+// Créer une fonction gamePlay qui gérera vos appels de fonctions et la transmission de votre variable d’une fonction à une autre.
 function gamePlay() {
     const givenNumber = askNumber();
     didIwin(givenNumber)
