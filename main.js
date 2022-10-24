@@ -4,18 +4,32 @@ function askNumber () {
     return parseInt(prompt('Guess a number'));
 }
 
-// --- Step 2 ---
+// --- Step 3 ---
 
-// Écrire une fonction qui prend en paramètre givenNumber et qui se nommera didIWin.
+// Désormais la fonction didIWin devra retourner true si l’utilisateur a trouvé le chiffre, false sinon.
 function didIwin(param) {
-    if (param < 22) alert('Taller')
-    if (param > 22) alert('Smaller')
-    if (param === 22) alert('Well Done !')
+    if (param < 22) {
+        alert('Taller');
+        return false;
+    }
+    if (param > 22) {
+        alert('Smaller');
+        return false
+    }
+    if (param === 22) {
+        alert('Well Done !');
+        return true;
+    }
 }
 
+// Dans la fonction gamePlay, si didIWin a retourné true, on arrete le jeu. 
+// En revanche, si elle a retourné false, on redemande un chiffre à l’utilisateur.
 function gamePlay() {
-    const givenNumber = askNumber();
-    didIwin(givenNumber)
+    let givenNumber = askNumber();
+    while (didIwin(givenNumber) === false) {
+        givenNumber = askNumber();
+        didIwin(givenNumber);
+    }
 }
 
-gamePlay()
+gamePlay();
