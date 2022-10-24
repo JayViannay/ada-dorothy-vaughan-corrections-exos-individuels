@@ -1,34 +1,40 @@
 console.log('👋 Hello from main.js');
+// --- Step 4 ---
 
-function askNumber () {
-    return parseInt(prompt('Guess a number'));
+// Créer une fonction qui demande au joueur 1 de fournir un nombre à deviner compris entre 0 et 50 tant qu’il ne respecte pas ce range.
+function askNumberPlayer1 () {
+    let number = parseInt(prompt('Player 1 : Choose a number between 0 and 50'));
+    if (number > 50 || number < 0) askNumberPlayer1();
+    else return number;
 }
 
-// --- Step 3 ---
+function askNumber () {
+    return parseInt(prompt('Player 2 : Guess number'));
+}
 
-// Désormais la fonction didIWin devra retourner true si l’utilisateur a trouvé le chiffre, false sinon.
-function didIwin(param) {
-    if (param < 22) {
+// La fonction didIWin doit prendre désormais un autre paramètre, le nombre à diviner.
+function didIwin(numberP2, numberP1) {
+    if (numberP2 < numberP1) {
         alert('Taller');
         return false;
     }
-    if (param > 22) {
+    if (numberP2 > numberP1) {
         alert('Smaller');
-        return false
+        return false;
     }
-    if (param === 22) {
-        alert('Well Done !');
+    if (numberP2 === numberP1) {
+        alert('Well Done, you win !');
         return true;
     }
 }
 
-// Dans la fonction gamePlay, si didIWin a retourné true, on arrete le jeu. 
-// En revanche, si elle a retourné false, on redemande un chiffre à l’utilisateur.
+// Reprenez la logique 1,2 et 3 pour gérer la partie et lui indiquer s’il doit continuer à jouer ou s’il a gagné.
 function gamePlay() {
+    const player1Number = askNumberPlayer1();
     let givenNumber = askNumber();
-    while (didIwin(givenNumber) === false) {
+    while (didIwin(givenNumber, player1Number) === false) {
         givenNumber = askNumber();
-        didIwin(givenNumber);
+        didIwin(givenNumber, player1Number);
     }
 }
 
