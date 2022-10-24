@@ -19,14 +19,9 @@
                 <h1>Guess Number Game</h1>
                 <p>- Ada Tech School - Dorothy Vaughan Paris 2022 -</p>
             </div>
-
-            <!-- GAME DISPLAY HERE -->
-            <!-- Afficher le range (0-50) auquel notre utilisateur à le droit autour du champs. Quelque chose comme 0 < ? < 50. -->
-            <!-- Ajouter un champs input qui permet à l’utilisateur de rentrer sa proposition de nombre directement dans un champs sur la page avec un bouton valider. -->
             <div class="col-md-6 mx-auto text-center bg-dark text-light p-5 rounded" id="game">
                 <label for="player_2_number" class="form-label">Player 2 <br> Guess a number !</label>
                 <div class="mt-2 alert alert-primary">
-                    <!-- Tant que l’utilisateur n’a pas trouvé le bon chiffre, on affichera le nombre de tentatives en cours sur la partie.-->
                     <p>Number of attempts : <span id="tries">0</span></p>
                     <p id="infos"></p>
                 </div>
@@ -37,9 +32,6 @@
                     <button type="button" class="btn btn-primary btn-sm" id="attempts">Try !</button>
                 </div>
             </div>
-
-            <!-- WIN DISPLAY HERE -->
-            <!-- Si l’utilisateur a gagné nous effacerons tout pour afficher notre message de bravo !-->
             <div class="col-md-6 mx-auto text-center bg-dark text-light p-5 rounded d-none" id="win">
                 <h2>🎉 YOU WIN !</h2>
                 <p>Number of attempts : <span id="win_tries"></span></p>
